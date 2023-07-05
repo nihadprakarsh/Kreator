@@ -4,6 +4,7 @@ const {
   IntentsBitField,
   EmbedBuilder,
   MessageEmbed,
+  ActivityType,
 } = require("discord.js");
 const { CommandHandler } = require("djs-commander");
 const path = require("path");
@@ -17,9 +18,18 @@ const client = new Client({
   ],
 });
 
+
+client.on('ready',(c)=>{
+  client.user.setActivity({
+    name:'Google I/O 2023',
+    type:ActivityType.Streaming,
+    url:'https://www.youtube.com/watch?v=cNfINi5CNbY&pp=ygUJZ29vZ2xlIGlv',
+  });
+});
+
 new CommandHandler({
   client,
-  eventsPath: path.join(__dirname, "../events"),
+  eventsPath: path.join(__dirname, 'events'),
 });
 
 {
@@ -48,8 +58,7 @@ new CommandHandler({
   ];
 }
 
-// for(let i =0 ;i < links.length;++i)
-// console.log(links[i].title + " " + links[i].source);
+
 
 client.on("messageCreate", (message) => {
   if (message.content === "/placement") {
