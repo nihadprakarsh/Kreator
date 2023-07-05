@@ -1,7 +1,12 @@
 require("dotenv").config();
-const { Client, IntentsBitField, EmbedBuilder } = require("discord.js");
-const { CommandHandler } = require('djs-commander');
-const path = require('path');
+const {
+  Client,
+  IntentsBitField,
+  EmbedBuilder,
+  MessageEmbed,
+} = require("discord.js");
+const { CommandHandler } = require("djs-commander");
+const path = require("path");
 
 const client = new Client({
   intents: [
@@ -14,9 +19,37 @@ const client = new Client({
 
 new CommandHandler({
   client,
-  eventsPath: path.join(__dirname,'../events'),
+  eventsPath: path.join(__dirname, "../events"),
 });
 
+{
+  help = ["Data Structures", "Algorithms", "Core CS Subjects", "Languages"];
+  array = [
+    "Arrays",
+    "Linked List",
+    "Greedy Algorithms",
+    "Recursion",
+    "Backtracking",
+    "Binary Search",
+    "Heaps",
+    "Stacks & Queue",
+    "String",
+    "Binary Tree",
+    "Graph",
+    "Dynamic Programming",
+    "Trie",
+  ];
+  links = [
+    {
+      title: "Arrays (Basic to Advanced)",
+      source: "Take you forward",
+      url: "https://www.youtube.com/watch?v=37E9ckMDdTk&list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB",
+    },
+  ];
+}
+
+// for(let i =0 ;i < links.length;++i)
+// console.log(links[i].title + " " + links[i].source);
 
 client.on("messageCreate", (message) => {
   if (message.content === "/placement") {
@@ -25,12 +58,11 @@ client.on("messageCreate", (message) => {
         help.map((i) => `${help.indexOf(i) + 1}. ${i}`).join("\n")
       );
 
-      
       const filter = (response) => !response.author.bot;
       const collector = message.channel.createMessageCollector({
         filter,
-        max: 1, 
-        time: 15000, 
+        max: 1,
+        time: 15000,
       });
 
       collector.on("collect", (response) => {
@@ -45,19 +77,27 @@ client.on("messageCreate", (message) => {
             max: 1, 
             time: 15000, 
           });
-
+    
           collector2.on("collect", (response2) => {
-            // Perform action based on the user's second response
-            // Display YouTube video as an embed
-            const videoUrl = response2.content;
-            const embed = {
-              title: "YouTube Video",
-              description: videoUrl,
-              url: videoUrl,
-            };
-            message.channel.send({ embed });
+            const index = Number(response2.content) - 1;
+            console.log(index);
+            if (index >= 0 && index < links.length) {
+              const embed = new EmbedBuilder().setTitle((links[index].title))
+              .setDescription(links[index].source)
+              .setURL(links[index].url)
+              .setColor('Random');
+    
+              const embed1 = new EmbedBuilder().setTitle("Array interview problems")
+              .setDescription("Leetcode Curated")
+              .setURL("https://www.youtube.com/watch?v=f-Kfg6ujpG8&list=PLjeQ9Mb66hM33kyoJjJbHf72Rb0G70Sae")
+              .setColor('Random');
+              message.channel.send({ embeds:[embed,embed1] });
+            } else {
+              message.channel.send("Invalid option selected.");
+            }
           });
-
+          
+    
           collector2.on("end", (collected) => {
             if (collected.size === 0) {
               message.channel.send("No video URL provided. The process has been canceled.");
@@ -70,18 +110,13 @@ client.on("messageCreate", (message) => {
 
       collector.on("end", (collected) => {
         if (collected.size === 0) {
-          message.channel.send("You didn't provide a valid option. The placement process has been canceled.");
+          message.channel.send(
+            "You didn't provide a valid option. The placement process has been canceled."
+          );
         }
       });
     });
   }
 });
 
-
-
-help = ["Data Structures", "Algorithms", "Core CS Subjects", "Languages"];
-array=["Arrays","Linked List","Greedy Algorithms","Recursion","Backtracking","Binary Search","Heaps","Stacks & Queue","String","Binary Tree","Graph","Dynamic Programming","Trie"];
-
-
 client.login(process.env.TOKEN);
-
