@@ -3,6 +3,9 @@ const links = require('./jsonObjects/ds.json');
 const {Client,IntentsBitField,EmbedBuilder, MessageEmbed,ActivityType,} = require("discord.js");
 const { CommandHandler } = require("djs-commander");
 const path = require("path");
+const array = require('./sub-Topics/ds.js');
+const cs = require('./sub-Topics/cs.js');
+const keepAlive = require(`./server`);
 
 const client = new Client({
   intents: [
@@ -13,7 +16,7 @@ const client = new Client({
   ],
 });
 
-
+const help = ["Data Structures & Algorithms", "Core CS Subjects", "Languages"];
 client.on('ready',(c)=>{
   client.user.setActivity({
     name:'Google I/O 2023',
@@ -27,25 +30,7 @@ new CommandHandler({
   eventsPath: path.join(__dirname, 'events'),
 });
 
-{
-  help = ["Data Structures", "Algorithms", "Core CS Subjects", "Languages"];
-  array = [
-    "Arrays",
-    "Linked List",
-    "Greedy Algorithms",
-    "Recursion",
-    "Backtracking",
-    "Binary Search",
-    "Heaps",
-    "Stacks & Queue",
-    "String",
-    "Binary Tree",
-    "Graph",
-    "Dynamic Programming",
-    "Trie",
-  ];
-  
-}
+
 
 
 client.on("messageCreate", (message) => {
@@ -72,7 +57,7 @@ client.on("messageCreate", (message) => {
           const collector2 = message.channel.createMessageCollector({
             filter,
             max: 1, 
-            time: 15000, 
+            time: 30000, 
           });
     
           collector2.on("collect", (response2) => {
@@ -97,11 +82,53 @@ client.on("messageCreate", (message) => {
     
           collector2.on("end", (collected) => {
             if (collected.size === 0) {
-              message.channel.send("No video URL provided. The process has been canceled.");
+              message.channel.send("No option provided. The process has been canceled.");
             }
           });
+
+
+
+
+
+
+
         } else if(selectedOption === 2){
           // Perform action for other options
+          message.channel.send(
+            cs.map((i) => `${cs.indexOf(i) + 1}. ${i}`).join("\n")
+          );
+          
+          const collector2 = message.channel.createMessageCollector({
+            filter,
+            max: 1, 
+            time: 30000, 
+          });
+    
+          collector2.on("collect", (response2) => {
+            const index = Number(response2.content) - 1;
+            console.log(index);
+            if (index >= 0 && index < links.length) {
+              const embed = new EmbedBuilder().setTitle((links[index].title))
+              .setDescription(links[index].source)
+              .setURL(links[index].url)
+              .setColor('Random');
+    
+              const embed1 = new EmbedBuilder().setTitle(links[index].title1)
+              .setDescription(links[index].source1)
+              .setURL(links[index].url1)
+              .setColor('Random');
+              message.channel.send({ embeds:[embed,embed1] });
+            } else {
+              message.channel.send("Invalid option selected.");
+            }
+          });
+          
+    
+          collector2.on("end", (collected) => {
+            if (collected.size === 0) {
+              message.channel.send("No option provided. The process has been canceled.");
+            }
+          });
         }
       });
 
@@ -117,3 +144,4 @@ client.on("messageCreate", (message) => {
 });
 
 client.login(process.env.TOKEN);
+keepAlive();

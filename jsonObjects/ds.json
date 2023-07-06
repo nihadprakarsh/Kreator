@@ -24,11 +24,75 @@
     "url1": "https://www.youtube.com/watch?v=OD6nZeMinl0&list=PLzVLIdIx9dQytK-Xrm1sn76XTLp8HKbhw"
   },
   {
-    "title": "Recursion (Basic to Advanced)",
+    "title": "Recursion & Backtracking (Basic to Advanced)",
     "source": "Take you Forward",
     "url": "https://www.youtube.com/watch?v=yVdKa8dnKiE&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9",
     "title1": "Recursion (Intermediate)",
     "source1": "Love Babbar",
     "url1": "https://www.youtube.com/watch?v=_-2u4EPHD88&list=PLDzeHZWIZsTqBmRGnsCOGNDG5FY0G04Td"
+  },
+  {
+    "title": "Binary Search (Basic to Advanced)",
+    "source": "Take you Forward",
+    "url": "https://www.youtube.com/watch?v=_NT69eLpqks&list=PLgUwDviBIf0pMFMWuuvDNMAkoQFi-h0ZF",
+    "title1": "Binary Search (Intermediate)",
+    "source1": "Aditya Verma",
+    "url1": "https://www.youtube.com/watch?v=j7NodO9HIbk&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2"
+  },
+  {
+    "title": "Heaps (Basics)",
+    "source": "Aditya Verma",
+    "url": "https://www.youtube.com/watch?v=hW8PrQrvMNc&list=PL_z_8CaSLPWdtY9W22VjnPxG30CXNZpI9",
+    "title1": "Heap (Interview Related Section)",
+    "source1": "Tech Dose",
+    "url1": "https://www.youtube.com/watch?v=RU08pp_VPSs&list=PLEJXowNB4kPyP2PdMhOUlTY6GrRIITx28"
+  },
+  {
+    "title": "Stack & Queue (Intermediate)",
+    "source": "Love Babbar",
+    "url": "https://www.youtube.com/watch?v=_6COl6V6mng&list=PLDzeHZWIZsTrhXYYtx4z8-u8zA-DzuVsj",
+    "title1": "Stack & Queue (Interview Related Section)",
+    "source1": "Tech Dose",
+    "url1": "https://www.youtube.com/watch?v=sDKpIO2HGq0&list=PLEJXowNB4kPzEvxN8ed6T13Meet7HP3h0"
+  },
+  {
+    "title": "Strings (Interview Related)",
+    "source": "Bro Coders",
+    "url": "https://www.youtube.com/watch?v=Bo4oHP7c_Gc&list=PLjeQ9Mb66hM05uqfKysHKi3eA5HhK7QSy",
+    "title1": "Important String related Problems & Concepts",
+    "source1": "Coding Ninjas",
+    "url1": "https://www.codingninjas.com/studio/library/strings"
+  },
+  {
+    "title": "Binary Trees (Interview Related)",
+    "source": "Take you forward",
+    "url": "https://www.youtube.com/watch?v=OYqYEM1bMK8&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk",
+    "title1": "Important Tree related Problems & Concepts",
+    "source1": "Bro Coders",
+    "url1": "https://www.youtube.com/watch?v=I1EEWVbu2SA&list=PLjeQ9Mb66hM3Dforxh8YfyZ3EDwxxHzav"
+  },
+  {
+    "title": "Graphs (Interview Related)",
+    "source": "Take you forward",
+    "url": "https://www.youtube.com/watch?v=M3_pLsDdeuU&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn",
+    "title1": "Graphs (2nd Resource)",
+    "source1": "Love Babbar",
+    "url1": "https://www.youtube.com/watch?v=EaK6aslcC5g&list=PLDzeHZWIZsTobi35C3I-tKB3tRDX6YxuA"
+  },
+  {
+    "title": "Dynamic Programming",
+    "source": "Take you forward",
+    "url": "https://www.youtube.com/watch?v=FfXoiwwnxFw&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY",
+    "title1": "DP Workshop (Must Do)",
+    "source1": "Vivek Gupta",
+    "url1": "https://www.youtube.com/watch?v=syDV-PzET-M&list=PLqf9emQRQrnKA_EeveiXQj_uP25w8_5qL"
+  },
+  {
+    "title": "Trie",
+    "source": "Take you forward",
+    "url": "https://www.youtube.com/watch?v=dBGUmUQhjaM&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp",
+    "title1": "Trie Related Interview Problems",
+    "source1": "unknown",
+    "url1": "https://www.youtube.com/watch?v=k1t_wtLrtWE&list=PLEI-q7w3s9gRRUtvAan4ADJs1qP_Jjy9N"
   }
 ]
