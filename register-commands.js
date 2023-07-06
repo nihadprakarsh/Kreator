@@ -17,6 +17,14 @@ const commands = [
     name:'resumehelp',
     description:'Assists in building resume'
   },
+  {
+    name:'resumetemplate',
+    description:'Most used template for freshers'
+  },
+  {
+    name:'sdesheet',
+    description:'The two most popular sde sheets',
+  }
 
 ];
 
