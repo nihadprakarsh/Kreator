@@ -11,8 +11,8 @@ Add this bot to your server and check the commands to get help in your placement
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| /about | `string` | get the discord details |
-| /version | `string` | get the discord version |
+| /about | `string` | get the bot details |
+| /version | `string` | get the bot version |
 | /resumehelp | `string` | helps in building the resume |
 | /resumetemplate | `string` | get the resume template |
 | /sdesheet | `string` | get the sde sheet |
