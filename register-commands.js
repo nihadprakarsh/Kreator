@@ -13,6 +13,11 @@ const commands = [
     description:'About Me'
   },
 
+  {
+    name:'resumehelp',
+    description:'Assists in building resume'
+  },
+
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
