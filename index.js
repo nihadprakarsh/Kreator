@@ -1,11 +1,6 @@
 require("dotenv").config();
-const {
-  Client,
-  IntentsBitField,
-  EmbedBuilder,
-  MessageEmbed,
-  ActivityType,
-} = require("discord.js");
+const links = require('./jsonObjects/ds.json');
+const {Client,IntentsBitField,EmbedBuilder, MessageEmbed,ActivityType,} = require("discord.js");
 const { CommandHandler } = require("djs-commander");
 const path = require("path");
 
@@ -49,15 +44,8 @@ new CommandHandler({
     "Dynamic Programming",
     "Trie",
   ];
-  links = [
-    {
-      title: "Arrays (Basic to Advanced)",
-      source: "Take you forward",
-      url: "https://www.youtube.com/watch?v=37E9ckMDdTk&list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB",
-    },
-  ];
+  
 }
-
 
 
 client.on("messageCreate", (message) => {
@@ -96,9 +84,9 @@ client.on("messageCreate", (message) => {
               .setURL(links[index].url)
               .setColor('Random');
     
-              const embed1 = new EmbedBuilder().setTitle("Array interview problems")
-              .setDescription("Leetcode Curated")
-              .setURL("https://www.youtube.com/watch?v=f-Kfg6ujpG8&list=PLjeQ9Mb66hM33kyoJjJbHf72Rb0G70Sae")
+              const embed1 = new EmbedBuilder().setTitle(links[index].title1)
+              .setDescription(links[index].source1)
+              .setURL(links[index].url1)
               .setColor('Random');
               message.channel.send({ embeds:[embed,embed1] });
             } else {
@@ -112,7 +100,7 @@ client.on("messageCreate", (message) => {
               message.channel.send("No video URL provided. The process has been canceled.");
             }
           });
-        } else {
+        } else if(selectedOption === 2){
           // Perform action for other options
         }
       });

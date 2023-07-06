@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Arrays (Basic to Advanced)",
+    "source": "Take you forward",
+    "url": "https://www.youtube.com/watch?v=37E9ckMDdTk&list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB",
+    "title1": "Array interview problems",
+    "source1": "Bro Coders",
+    "url1": "https://www.youtube.com/watch?v=f-Kfg6ujpG8&list=PLjeQ9Mb66hM33kyoJjJbHf72Rb0G70Sae"
+  },
+  {
+    "title": "Linked List (Basic to Advanced)",
+    "source": "Take you forward",
+    "url": "https://www.youtube.com/watch?v=iRtLEoL-r-g&list=PLgUwDviBIf0r47RKH7fdWN54AbWFgGuii",
+    "title1": "Linked List interview problems",
+    "source1": "Love Babbar",
+    "url1": "https://www.youtube.com/watch?v=q8gdBn9RPeI&list=PLDzeHZWIZsTr54_TH_NK4ibFojS4mmQA6"
+  },
+  {
+    "title": "Greedy Algorithms (Basic to Advanced)",
+    "source": "Bro Coders",
+    "url": "https://www.youtube.com/watch?v=oA8GopViyI4&list=PLjeQ9Mb66hM3-awRd9EmL4dEhNc93MG-V",
+    "title1": "Greedy Algorithms interview problems",
+    "source1": "Codeforces",
+    "url1": "https://www.youtube.com/watch?v=OD6nZeMinl0&list=PLzVLIdIx9dQytK-Xrm1sn76XTLp8HKbhw"
+  },
+  {
+    "title": "Recursion (Basic to Advanced)",
+    "source": "Take you Forward",
+    "url": "https://www.youtube.com/watch?v=yVdKa8dnKiE&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9",
+    "title1": "Recursion (Intermediate)",
+    "source1": "Love Babbar",
+    "url1": "https://www.youtube.com/watch?v=_-2u4EPHD88&list=PLDzeHZWIZsTqBmRGnsCOGNDG5FY0G04Td"
+  }
+]
