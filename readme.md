@@ -27,8 +27,6 @@ Contributions are always welcome!
 
 Open to pull requests
 
-Please adhere to this project's `code of conduct`.
-
 
 ## Authors
 
