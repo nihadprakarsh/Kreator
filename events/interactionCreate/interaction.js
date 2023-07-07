@@ -4,7 +4,7 @@ module.exports = (interaction)=>{
     if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'about') {
-    return interaction.reply(`Written in TypeScript & developed by Nihad`);
+    return interaction.reply(`Written in Javascript & developed by Nihad`);
   }
 
   if (interaction.commandName === 'version') {
